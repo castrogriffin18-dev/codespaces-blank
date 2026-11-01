@@ -4,39 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio | About</title>
+    <meta name="description" content="Learn about Tyler Griffin, a student developer focused on accessible web design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
+    <header class="site-header">
+      <nav class="site-nav page-width" aria-label="Main navigation">
+        <a class="brand" href="index.html">Tyler Griffin<span>.</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="projects.html">Projects</a>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h1>About Me</h1>
+    <main id="main-content" class="page-width">
+      <section class="page-heading">
+        <p class="eyebrow">Get to know me</p>
+        <h1>A little about <span>me.</span></h1>
+        <p class="page-lead">I’m a student developer who believes a good website should feel as good to use as it looks.</p>
       </section>
 
-      <section>
-        <h2>My Background</h2>
-        <p>I am a student developer focused on creating accessible, responsive websites.</p>
-      </section>
+      <div class="about-grid">
+        <section class="info-card">
+          <p class="eyebrow">My background</p>
+          <h2>Building for people</h2>
+          <p>I am a student developer focused on creating accessible, responsive websites. I enjoy learning how thoughtful structure and clear design can make the web work better for everyone.</p>
+        </section>
 
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Accessibility</li>
-        </ul>
-      </section>
+        <section class="info-card skills-card">
+          <p class="eyebrow">What I’m learning</p>
+          <h2>Skills & interests</h2>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Accessibility</li>
+          </ul>
+        </section>
+      </div>
     </main>
 
-    <footer>
-      <p>© 2026 Tyler Griffin</p>
+    <footer class="site-footer">
+      <p class="page-width">© 2026 Tyler Griffin <span>Made with care.</span></p>
     </footer>
   </body>
 </html>

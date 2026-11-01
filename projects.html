@@ -4,43 +4,60 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio | Projects</title>
+    <meta name="description" content="Explore projects by Tyler Griffin, a student developer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
+    <header class="site-header">
+      <nav class="site-nav page-width" aria-label="Main navigation">
+        <a class="brand" href="index.html">Tyler Griffin<span>.</span></a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+        </div>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h1>Projects</h1>
+    <main id="main-content" class="page-width">
+      <section class="page-heading">
+        <p class="eyebrow">A few things I’ve been working on</p>
+        <h1>Selected <span>projects.</span></h1>
+        <p class="page-lead">Small steps, thoughtful details, and plenty of room to keep learning.</p>
       </section>
 
-      <section>
-        <h2>Featured Work</h2>
+      <section class="content-section projects-section">
+        <h2 class="visually-hidden">Featured work</h2>
+        <div class="project-grid all-projects">
+          <article class="project-card">
+            <p class="project-number">01 / Web development</p>
+            <h3>Interactive web project</h3>
+            <p>A project built using HTML, CSS, and JavaScript.</p>
+            <span class="project-tag">HTML · CSS · JavaScript</span>
+          </article>
 
-        <article>
-          <h3>Project 1</h3>
-          <p>A project built using HTML, CSS, and JavaScript.</p>
-        </article>
+          <article class="project-card">
+            <p class="project-number">02 / Responsive design</p>
+            <h3>Responsive website</h3>
+            <p>A responsive website that highlights user-centered design.</p>
+            <span class="project-tag">Responsive · UX</span>
+          </article>
 
-        <article>
-          <h3>Project 2</h3>
-          <p>A responsive website that highlights user-centered design.</p>
-        </article>
-
-        <article>
-          <h3>Project 3</h3>
-          <p>A portfolio page focused on clean layout and accessibility.</p>
-        </article>
+          <article class="project-card">
+            <p class="project-number">03 / Portfolio</p>
+            <h3>Accessible portfolio</h3>
+            <p>A portfolio page focused on clean layout and accessibility.</p>
+            <span class="project-tag">Accessibility · Design</span>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>© 2026 Tyler Griffin</p>
+    <footer class="site-footer">
+      <p class="page-width">© 2026 Tyler Griffin <span>Made with care.</span></p>
     </footer>
   </body>
 </html>

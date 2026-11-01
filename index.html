@@ -4,43 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio | Home</title>
+    <meta name="description" content="The portfolio of Tyler Griffin, web developer and student." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
+    <header class="site-header">
+      <nav class="site-nav page-width" aria-label="Main navigation">
+      <a class="brand" href="index.html">Tyler Griffin<span>.</span></a>
+      <div class="nav-links">
+        <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
+      </div>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h1>Hi, I'm Tyler Griffin</h1>
-        <p>Web Developer and Student</p>
-        <a href="projects.html">View My Work</a>
+    <main id="main-content" class="page-width">
+      <section class="hero">
+      <p class="eyebrow">Web developer · Student</p>
+      <h1>Hi, I'm <span>Tyler Griffin</span></h1>
+      <p class="hero-copy">I create thoughtful, accessible digital experiences and love turning ideas into websites.</p>
+      <a class="button-link" href="projects.html">Explore my work <span aria-hidden="true">→</span></a>
       </section>
 
-      <section>
-        <h2>About Me</h2>
-        <p>I build clean, accessible websites and enjoy learning new technologies.</p>
+      <section class="content-section intro-section">
+      <div>
+        <p class="eyebrow">A little about me</p>
+        <h2>Curious by nature.<br />Thoughtful by design.</h2>
+      </div>
+      <div class="intro-copy">
+        <p>I build clean, accessible websites and enjoy learning new technologies. I care about the details that make the web feel welcoming and easy to use.</p>
+        <a class="text-link" href="about.html">More about me <span aria-hidden="true">→</span></a>
+      </div>
       </section>
 
-      <section>
-        <h2>Featured Projects</h2>
-        <article>
-          <h3>Project One</h3>
-          <p>I am planning the site structure and creating an HTML foundaton that can be expanded with styling, accessibility improvements, JavaScript, and deployment.</p>
+      <section class="content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Featured projects</h2>
+        </div>
+        <a class="text-link" href="projects.html">All projects <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="project-number">01 / Foundation</p>
+          <h3>Portfolio foundation</h3>
+          <p>I am planning the site structure and creating an HTML foundation that can be expanded with styling, accessibility improvements, JavaScript, and deployment.</p>
+          <span class="project-tag">HTML · Accessibility</span>
         </article>
-        <article>
-          <h3>Project Two</h3>
+        <article class="project-card">
+          <p class="project-number">02 / Responsive design</p>
+          <h3>Responsive portfolio</h3>
           <p>For project two, I am extending the portfolio foundation with visual styling and responsive layout.</p>
+          <span class="project-tag">CSS · Responsive design</span>
         </article>
+      </div>
       </section>
     </main>
 
-    <footer>
-      <p>© 2026 Tyler Griffin</p>
+    <footer class="site-footer">
+      <p class="page-width">© 2026 Tyler Griffin <span>Made with care.</span></p>
     </footer>
   </body>
 </html>
