@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio | About</title>
+    <title>My Portfolio | About & Contact</title>
     <meta name="description" content="Learn about Tyler Griffin, a student developer focused on accessible web design." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,10 +48,85 @@
           </ul>
         </section>
       </div>
+
+      <section class="contact-section" aria-labelledby="contact-heading">
+        <div class="contact-heading">
+          <p class="eyebrow">Say hello</p>
+          <h2 id="contact-heading">Contact me</h2>
+          <p class="contact-copy">Fields marked required must be completed. This demo form is not connected to a message service yet.</p>
+        </div>
+
+        <form class="contact-form">
+          <fieldset>
+            <legend>Your contact details</legend>
+            <div class="form-field">
+              <label for="contact-name">Name <span>(required)</span></label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="name-hint name-error" />
+              <p class="field-hint" id="name-hint">Enter your name.</p>
+              <p class="form-error" id="name-error" hidden aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email address <span>(required)</span></label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="email-hint email-error" />
+              <p class="field-hint" id="email-hint">Use an address in the format name@example.com.</p>
+              <p class="form-error" id="email-error" hidden aria-live="polite"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message <span>(required)</span></label>
+              <textarea id="contact-message" name="message" rows="6" required aria-describedby="message-hint message-error"></textarea>
+              <p class="field-hint" id="message-hint">Write the message you would like to send.</p>
+              <p class="form-error" id="message-error" hidden aria-live="polite"></p>
+            </div>
+          </fieldset>
+
+          <button class="button-link" type="submit">Check message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer">
       <p class="page-width">© 2026 Tyler Griffin <span>Made with care.</span></p>
     </footer>
+    <script>
+      const form = document.querySelector(".contact-form");
+      const status = form.querySelector(".form-status");
+
+      function showError(field) {
+        const error = document.getElementById(`${field.id.replace("contact-", "")}-error`);
+        error.textContent = field.validationMessage;
+        error.hidden = false;
+        field.setAttribute("aria-invalid", "true");
+      }
+
+      function clearError(field) {
+        const error = document.getElementById(`${field.id.replace("contact-", "")}-error`);
+        error.textContent = "";
+        error.hidden = true;
+        field.removeAttribute("aria-invalid");
+      }
+
+      let submitted = false;
+
+      form.addEventListener("invalid", (event) => {
+        submitted = true;
+        showError(event.target);
+      }, true);
+
+      form.addEventListener("input", (event) => {
+        if (event.target.validity.valid) {
+          clearError(event.target);
+        } else if (submitted) {
+          showError(event.target);
+        }
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        status.textContent = "Your message passed validation, but this demo form is not connected to a message service yet.";
+      });
+    </script>
   </body>
 </html>
